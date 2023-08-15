@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			background: url(bg.jpg) no-repeat;
+			background-size: cover;
+		}
+		.login{
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			position: absolute;
+			color: #fff;
+		}
+		.login h1{
+			font-size: 40px;
+			text-align: center;
+			text-transform: uppercase;
+			margin: 40px 0;
+		}
+		.login p{
+			font-size: 20px;
+			margin: 15px 0;
+		}
+		.login input {
+			font-size: 16px;
+			width: 100%;
+			padding: 15px 10px;
+			border: 0;
+			outline: none;
+			border-radius: 5px;
+		}
+		.login button {
+			font-size: 18px;
+			font-weight: bold;
+			margin: 20px 0;
+			padding: 10px 15px;
+		}
+
+	</style>
+	<title> LOGIN PAGE </title>
+</head>
+<body>
+	<div class="login">
+		
+		<h1> LOGIN FORM </h1>
+		<p> USER ID</p>
+		<input type="text" placeholder="Enter user id" id="us">
+		<p> PASSWORD</p>
+		<input type="password" placeholder="Enter password" id="pwd">
+		<button type="button" onclick="myform()" >Login </button> 
+
+	</div>
+<script>
+	function myform(){
+		var user_id =document.getElementById("us").value;
+		var password =document.getElementById("pwd").value;
+		window.alert(user_id);
+		
+		if(user_id==9836 && password=="abcd")  
+		{
+			window.alert(password);
+			location.replace("index.html");
+		}
+  else{
+	window.alert("incorrect information ");
+}
+}
+</script>
+</body>
+</html>  
